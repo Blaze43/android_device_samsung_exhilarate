@@ -61,3 +61,9 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/exhilarate/bluetooth
 
 BOARD_NEEDS_MEMORYHEAPPMEM := true
+
+# Kernel inline build
+TARGET_KERNEL_CONFIG := cyanogenmod_exhilarate_defconfig
+TARGET_VARIANT_CONFIG := cyanogenmod_exhilarate_defconfig
+TARGET_SELINUX_CONFIG := cyanogenmod_exhilarate_defconfig
+

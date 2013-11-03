@@ -17,6 +17,12 @@
 ## (2) Also get non-open-source specific aspects if available
 $(call inherit-product-if-exists, vendor/samsung/exhilarate/exhilarate-vendor.mk)
 
+ifeq ($(TARGET_PREBUILT_KERNEL),)
+LOCAL_KERNEL := device/samsung/exhilarate/kernel
+else
+LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
+endif
+
 ## overlays
 DEVICE_PACKAGE_OVERLAYS += device/samsung/exhilarate/overlay
 

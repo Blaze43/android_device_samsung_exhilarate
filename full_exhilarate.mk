@@ -25,11 +25,18 @@
 PRODUCT_PACKAGES := \
     Torch
 
+# Live Wallpapers
+PRODUCT_PACKAGES += \
+        LiveWallpapers \
+        LiveWallpapersPicker \
+        MagicSmokeWallpapers \
+        VisualizationWallpapers \
+        librs_jni
+
 BOARD_HAVE_NFC := true
 
 # Inherit from those products. Most specific first.
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
-# Inherit from exhilarate device
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 $(call inherit-product, device/samsung/exhilarate/device.mk)
 
 # Set those variables here to overwrite the inherited values.
@@ -38,3 +45,4 @@ PRODUCT_DEVICE := exhilarate
 PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := samsung
 PRODUCT_MODEL := SAMSUNG-SGH-I577
+PRODUCT_RESTRICT_VENDOR_FILES := false
